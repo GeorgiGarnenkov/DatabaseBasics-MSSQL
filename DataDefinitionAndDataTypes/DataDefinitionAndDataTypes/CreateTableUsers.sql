@@ -1,0 +1,17 @@
+CREATE TABLE Users
+(
+	Id INT PRIMARY KEY IDENTITY(1,1),
+	Username VARCHAR(30) NOT NULL UNIQUE,
+	[Password] VARCHAR(26) NOT NULL,
+	ProfilePicture VARBINARY(MAX),
+	LastLoginTime DATETIME,
+	IsDeleted BIT
+)
+
+INSERT INTO Users(Username, [Password], ProfilePicture, LastLoginTime, IsDeleted) VALUES
+('Ivan', '123', NULL, CONVERT(DATETIME, '22-05-2018', 103), 0),
+('Gosho', '1234', NULL, CONVERT(DATETIME, '22-05-2018', 103), 0),
+('Stoqn', '12345', NULL, CONVERT(DATETIME, '22-05-2018', 103), 0),
+('Dragan', '123456', NULL, CONVERT(DATETIME, '22-05-2018', 103), 0),
+('Pesho', '1234567', NULL, CONVERT(DATETIME, '22-05-2018', 103), 0)
+
